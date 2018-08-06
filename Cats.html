@@ -25,16 +25,16 @@
 	
 
 	function doSomething(){
-		setInterval(function() { printer() }, 1000);
+		setInterval(function() { printer() }, 700);
 		console.log("What;");
 	}
 
 	function printer(){
 
 		console.log("What;");
-		randWidth = Math.floor(Math.random() * 101);
-		randHeight = Math.floor(Math.random() * 101);
-		randSize = Math.floor(Math.random() * 101);
+		randWidth = Math.floor(Math.random() * 81);
+		randHeight = Math.floor(Math.random() * 81);
+		randSize = Math.floor(Math.random() * 30) + 30;
 
 		var div = document.createElement('div');
 		
