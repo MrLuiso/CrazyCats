@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Massive Printer</title>
+	<meta charset='utf-8'>
+</head>
+<body>
+
+	
+	<button onclick="doSomething()" style="position: block; top: 50%; right: 50%">Do something</button>
+
+	<div id="container" style="position: absolute; width: 100%; height: 100%">
+		
+	</div>
+
+</body>
+<script type="text/javascript">
+
+	var randWidth;
+	var randHeight;
+	var randSize;
+
+	var counter = 0;
+	var checker = false;
+	
+
+	function doSomething(){
+		setInterval(function() { printer() }, 1000);
+		console.log("What;");
+	}
+
+	function printer(){
+
+		console.log("What;");
+		randWidth = Math.floor(Math.random() * 101);
+		randHeight = Math.floor(Math.random() * 101);
+		randSize = Math.floor(Math.random() * 101);
+
+		var div = document.createElement('div');
+		
+
+		div.innerHTML = '😼'	;
+		div.style = 'position: absolute; top: ' + randHeight + '%; right: ' + randWidth + '%; font-size: ' + randSize + 'px;';
+		div.onclick = function () {
+			div.style = 'display: none';
+			counter--;
+		};
+
+
+		
+
+		if(checker && counter === 0){
+			alert("You Win");
+		}
+		
+
+		document.getElementById('container').appendChild(div);
+		counter++;
+
+		checker = true;
+
+
+		
+
+	}
+
+	
+</script>
+</html>
