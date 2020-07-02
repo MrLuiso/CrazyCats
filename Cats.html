@@ -6,11 +6,9 @@
 </head>
 <body>
 
-	
 	<button onclick="doSomething()" style="position: block; top: 50%; right: 50%">Do something</button>
 
-	<div id="container" style="position: absolute; width: 100%; height: 100%">
-		
+	<div id="container" style="position: absolute; width: 100%; height: 100%">		
 	</div>
 
 </body>
@@ -38,7 +36,6 @@
 
 		var div = document.createElement('div');
 		
-
 		div.innerHTML = '😼'	;
 		div.style = 'position: absolute; top: ' + randHeight + '%; right: ' + randWidth + '%; font-size: ' + randSize + 'px;';
 		div.onclick = function () {
@@ -46,24 +43,15 @@
 			counter--;
 		};
 
-
-		
-
 		if(checker && counter === 0){
 			alert("You Win");
 		}
 		
-
 		document.getElementById('container').appendChild(div);
 		counter++;
 
 		checker = true;
-
-
-		
-
 	}
 
-	
 </script>
 </html>
