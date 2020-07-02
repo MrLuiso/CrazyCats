@@ -8,7 +8,7 @@
 
 	<button onclick="doSomething()" style="position: block; top: 50%; right: 50%">Do something</button>
 
-	<div id="container" style="position: absolute; width: 100%; height: 100%">		
+	<div id="container" style="position: absolute; width: 80%; height: 100%; margin-left: 10%; margin-right: 10%;">		
 	</div>
 
 </body>
@@ -23,14 +23,14 @@
 	
 
 	function doSomething(){
-		setInterval(function() { printer() }, 700);
+		setInterval(function() { printer() }, 100);
 		console.log("What;");
 	}
 
 	function printer(){
 
 		console.log("What;");
-		randWidth = Math.floor(Math.random() * 81);
+		randWidth = Math.floor(Math.random() * 100);
 		randHeight = Math.floor(Math.random() * 81);
 		randSize = Math.floor(Math.random() * 30) + 30;
 
